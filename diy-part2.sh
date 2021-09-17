@@ -12,3 +12,12 @@
 
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+
+echo ""
+echo ""
+echo "==> Running DIY script 2"
+echo ""
+echo ""
+echo "==> Patching linux kernel with sercomm patches"
+patch -p1 < ${GITHUB_WORKSPACE}/patch-1.diff
+patch -p1 < ${GITHUB_WORKSPACE}/patch-2.diff
